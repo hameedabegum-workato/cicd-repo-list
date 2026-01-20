@@ -1,0 +1,68 @@
+{
+  "name": "Recipe Function POC",
+  "description": "",
+  "version": 2,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "workato_recipe_function",
+    "name": "execute",
+    "as": "3f53f2fa",
+    "keyword": "trigger",
+    "input": {
+    },
+    "block": [
+      {
+        "number": 1,
+        "provider": "logger",
+        "name": "log_message",
+        "as": "8a84be92",
+        "keyword": "action",
+        "input": {
+          "user_logs_enabled": "false",
+          "message": "Invoked!"
+        },
+        "extended_input_schema": [
+          {
+            "control_type": "switch",
+            "default": false,
+            "disable_formula": true,
+            "extends_schema": true,
+            "hint": "                Send a copy of the message to Workato logs.\n                <a href=\"https://docs.workato.com/features/logging-service.html\" target=\"_blank\" class=\"ng-scope\">\n                  Learn more\n                </a>\n",
+            "label": "Send to Workato log service",
+            "name": "user_logs_enabled",
+            "optional": true,
+            "type": "string"
+          }
+        ],
+        "uuid": "531cfec9-1ae3-42ac-b3b5-073957c23547"
+      },
+      {
+        "number": 2,
+        "provider": "workato_recipe_function",
+        "name": "return_result",
+        "as": "c9df3bfe",
+        "keyword": "action",
+        "input": {
+        },
+        "uuid": "31bc928d-f986-48c1-b716-86fe4d10670e"
+      }
+    ],
+    "uuid": "4e447741-d0ea-4ac8-91f1-a480d9a3a52e"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "workato_recipe_function",
+      "skip_validation": false,
+      "account_id": null
+    },
+    {
+      "keyword": "application",
+      "provider": "logger",
+      "skip_validation": false,
+      "account_id": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Add item to cart",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/add_item_to_cart.recipe.json",
+    "name": "Add item to cart",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "POST",
+  "path": "cart/items",
+  "legacy": false,
+  "validate_request": false
+}
