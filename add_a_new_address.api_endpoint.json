@@ -1,0 +1,17 @@
+{
+  "name": "Add a new address",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/add_a_new_address.recipe.json",
+    "name": "Add a new address",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "POST",
+  "path": "addresses",
+  "legacy": false,
+  "validate_request": false
+}
