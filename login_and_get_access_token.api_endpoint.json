@@ -1,0 +1,17 @@
+{
+  "name": "Login and get access token",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/login_and_get_access_token.recipe.json",
+    "name": "Login and get access token",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "POST",
+  "path": "auth/login",
+  "legacy": false,
+  "validate_request": false
+}

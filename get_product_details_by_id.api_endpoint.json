@@ -1,0 +1,23 @@
+{
+  "name": "Get product details by ID",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/get_product_details_by_id.recipe.json",
+    "name": "Get product details by ID",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "GET",
+  "path": "products/{id}",
+  "legacy": false,
+  "validate_request": false,
+  "use_cache": false,
+  "cache_ttl": 0,
+  "cache_keys": [
+
+  ],
+  "cache_size_limit": 10240
+}

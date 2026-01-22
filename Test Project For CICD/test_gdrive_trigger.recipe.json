@@ -1,0 +1,76 @@
+{
+  "name": "Test GDrive Trigger",
+  "description": "",
+  "version": 3,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "google_drive",
+    "name": "new_file_or_folder",
+    "as": "ffe4f8b2",
+    "keyword": "trigger",
+    "dynamicPickListSelection": {
+      "folderId": {
+        "ids": [
+          "0ANcj_Pv-YZUlUk9PVA"
+        ],
+        "titles": [
+          "My Drive"
+        ]
+      }
+    },
+    "toggleCfg": {
+      "folderId": true
+    },
+    "input": {
+      "folderId": "0ANcj_Pv-YZUlUk9PVA"
+    },
+    "block": [
+      {
+        "number": 1,
+        "provider": "logger",
+        "name": "log_message",
+        "as": "9cd4886b",
+        "keyword": "action",
+        "input": {
+          "user_logs_enabled": "false",
+          "message": "received"
+        },
+        "extended_input_schema": [
+          {
+            "control_type": "switch",
+            "default": false,
+            "disable_formula": true,
+            "extends_schema": true,
+            "hint": "                Send a copy of the message to Workato logs.\n                <a href=\"https://docs.workato.com/features/logging-service.html\" target=\"_blank\" class=\"ng-scope\">\n                  Learn more\n                </a>\n",
+            "label": "Send to Workato log service",
+            "name": "user_logs_enabled",
+            "optional": true,
+            "type": "string"
+          }
+        ],
+        "uuid": "3cd7a75d-ff85-4e38-aa5a-d22d6eb1ad05"
+      }
+    ],
+    "uuid": "e6b31b1d-d2ff-4e3f-9c44-644470cb96f0"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "google_drive",
+      "skip_validation": false,
+      "account_id": {
+        "zip_name": "Test Project For CICD/my_google_drive_account.connection.json",
+        "name": "My Google Drive account",
+        "folder": "Test Project For CICD"
+      }
+    },
+    {
+      "keyword": "application",
+      "provider": "logger",
+      "skip_validation": false,
+      "account_id": null
+    }
+  ]
+}

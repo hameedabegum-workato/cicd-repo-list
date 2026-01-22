@@ -1,0 +1,130 @@
+{
+  "name": "test workato formula",
+  "description": "",
+  "version": 7,
+  "private": true,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "workato_recipe_function",
+    "name": "execute",
+    "as": "09f4f1a5",
+    "keyword": "trigger",
+    "input": {
+      "parameters_schema_json": "[{\"control_type\":\"text\",\"label\":\"Name\",\"type\":\"string\",\"name\":\"name\"}]"
+    },
+    "extended_output_schema": [
+      {
+        "label": "Parameters",
+        "name": "parameters",
+        "properties": [
+          {
+            "control_type": "text",
+            "label": "Name",
+            "type": "string",
+            "name": "name"
+          }
+        ],
+        "type": "object"
+      }
+    ],
+    "block": [
+      {
+        "number": 1,
+        "provider": "workato_variable",
+        "name": "declare_variable",
+        "as": "53d8d60c",
+        "keyword": "action",
+        "input": {
+          "variables": {
+            "schema": "[{\"name\":\"output\",\"type\":\"string\",\"optional\":true,\"label\":\"output\",\"details\":{\"real_name\":\"output\"},\"control_type\":\"text\",\"parent\":[\"variables\",\"data\"]}]",
+            "data": {
+              "output": "=_dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"09f4f1a5\",\"path\":[\"parameters\",\"name\"]}').scan(/https?:\\/\\/([^.]+\\.[^.]+)/).first.first == \"www.workato\" ? \"https://app.workato.com\" : _dp('{\"pill_type\":\"output\",\"provider\":\"workato_recipe_function\",\"line\":\"09f4f1a5\",\"path\":[\"parameters\",\"name\"]}').split(\"/api\")[0]"
+            }
+          }
+        },
+        "extended_output_schema": [
+          {
+            "control_type": "text",
+            "label": "output",
+            "name": "output",
+            "optional": true,
+            "type": "string",
+            "details": {
+              "real_name": "output"
+            }
+          }
+        ],
+        "extended_input_schema": [
+          {
+            "add_field_label": "Add a variable",
+            "control_type": "form-schema-builder",
+            "empty_schema_title": "Add variables by giving them a name, type and default value",
+            "exclude_fields": [
+              "hint"
+            ],
+            "item_label": "variable",
+            "label": "Variables",
+            "mark_as_required": true,
+            "name": "variables",
+            "ngIf": "!input.name",
+            "optional": true,
+            "properties": [
+              {
+                "control_type": "text",
+                "label": "Schema",
+                "extends_schema": true,
+                "broadcast_change_event": true,
+                "type": "string",
+                "name": "schema"
+              },
+              {
+                "properties": [
+                  {
+                    "control_type": "text",
+                    "label": "output",
+                    "name": "output",
+                    "type": "string",
+                    "optional": true,
+                    "details": {
+                      "real_name": "output"
+                    },
+                    "parent": [
+                      "variables",
+                      "data"
+                    ],
+                    "hint": "Defaults to nil if not supplied.",
+                    "sticky": true
+                  }
+                ],
+                "label": "Data",
+                "type": "object",
+                "name": "data"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "visible_config_fields": [
+          "variables.data.output"
+        ],
+        "uuid": "01db4fa9-9f40-4170-a496-79825c0a3e2e"
+      }
+    ],
+    "uuid": "08659860-8bcc-45c3-a993-81c61ff26c24"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "workato_recipe_function",
+      "skip_validation": false,
+      "account_id": null
+    },
+    {
+      "keyword": "application",
+      "provider": "workato_variable",
+      "skip_validation": false,
+      "account_id": null
+    }
+  ]
+}

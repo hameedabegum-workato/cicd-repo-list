@@ -1,0 +1,17 @@
+{
+  "name": "Checkout and place order",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/checkout_and_place_order.recipe.json",
+    "name": "Checkout and place order",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "POST",
+  "path": "checkout",
+  "legacy": false,
+  "validate_request": false
+}
