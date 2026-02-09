@@ -1,0 +1,23 @@
+{
+  "name": "Get current user's cart",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/get_current_user_s_cart.recipe.json",
+    "name": "Get current user's cart",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "GET",
+  "path": "cart",
+  "legacy": false,
+  "validate_request": false,
+  "use_cache": false,
+  "cache_ttl": 0,
+  "cache_keys": [
+
+  ],
+  "cache_size_limit": 10240
+}

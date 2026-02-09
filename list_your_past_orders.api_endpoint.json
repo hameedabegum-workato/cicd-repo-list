@@ -1,0 +1,23 @@
+{
+  "name": "List your past orders",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/list_your_past_orders.recipe.json",
+    "name": "List your past orders",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "GET",
+  "path": "orders",
+  "legacy": false,
+  "validate_request": false,
+  "use_cache": false,
+  "cache_ttl": 0,
+  "cache_keys": [
+
+  ],
+  "cache_size_limit": 10240
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Create a new user account",
+  "recipe_id": {
+    "zip_name": "Test Project For CICD/E-commerce API/create_a_new_user_account.recipe.json",
+    "name": "Create a new user account",
+    "folder": "Test Project For CICD/E-commerce API"
+  },
+  "api_group_id": {
+    "zip_name": "e_commerce_api.api_group.json",
+    "name": "E-commerce API",
+    "folder": ""
+  },
+  "method": "POST",
+  "path": "auth/register",
+  "legacy": false,
+  "validate_request": false
+}

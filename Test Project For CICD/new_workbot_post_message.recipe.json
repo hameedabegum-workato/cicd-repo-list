@@ -1,0 +1,81 @@
+{
+  "name": "New Workbot post message",
+  "version": 4,
+  "private": false,
+  "concurrency": 1,
+  "code": {
+    "number": 0,
+    "provider": "google_drive",
+    "name": "new_file_or_folder",
+    "as": "af441e48",
+    "keyword": "trigger",
+    "dynamicPickListSelection": {
+      "folderId": {
+        "ids": [
+          "0ANcj_Pv-YZUlUk9PVA"
+        ],
+        "titles": [
+          "My Drive"
+        ]
+      }
+    },
+    "toggleCfg": {
+      "folderId": true
+    },
+    "input": {
+      "folderId": "0ANcj_Pv-YZUlUk9PVA"
+    },
+    "block": [
+      {
+        "number": 1,
+        "provider": "slack_bot",
+        "name": "post_bot_message",
+        "as": "post_bot_message",
+        "keyword": "action",
+        "dynamicPickListSelection": {
+          "channel": {
+            "ids": [
+              "C09PU9G419T"
+            ],
+            "titles": [
+              "all-workato-accl-test"
+            ]
+          }
+        },
+        "toggleCfg": {
+          "channel": false
+        },
+        "input": {
+          "channel": "C09PU9G419T",
+          "text": "File or Folder added"
+        },
+        "comment": "Decide how you want Workbot to notify you on Slack. Normally, you want it to contain info from the trigger above.",
+        "uuid": "7427c267-4366-4c95-97e1-657e25d47747"
+      }
+    ],
+    "comment": "Connect an app, then decide which events in the app you want Workbot to notify you about.",
+    "uuid": "34543581-dc9f-4f37-a0bb-01a31e3d470e"
+  },
+  "config": [
+    {
+      "keyword": "application",
+      "provider": "slack_bot",
+      "account_id": {
+        "zip_name": "Test Project For CICD/my_second_workbot_for_slack_account.connection.json",
+        "name": "My second Workbot for Slack account",
+        "folder": "Test Project For CICD"
+      },
+      "skip_validation": false
+    },
+    {
+      "keyword": "application",
+      "provider": "google_drive",
+      "skip_validation": false,
+      "account_id": {
+        "zip_name": "Test Project For CICD/my_google_drive_account.connection.json",
+        "name": "My Google Drive account",
+        "folder": "Test Project For CICD"
+      }
+    }
+  ]
+}
